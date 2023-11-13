@@ -1,0 +1,15 @@
+https://www.youtube.com/watch?v=gCo6JqGMi30&list=PL0eyrZgxdwhyfSPF6sHd7Ibm3R0THoOJd&index=3
+
+https://www.fullstackpython.com/deployment.html
+https://flask.palletsprojects.com/en/3.0.x/quickstart/
+
+# Dashboard & Admin Panel - 
+https://www.codexworld.com/import-excel-file-data-into-mysql-database-using-php/
+https://www.scaler.com/topics/php-tutorial/crud-operation-in-php/
+
+# Drop-down List - 
+https://www.scaler.com/topics/dropdown-in-html/
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_optgroup
+https://www.w3schools.com/howto/howto_js_dropdown.asp | https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
+https://www.freecodecamp.org/news/html-drop-down-menu-how-to-add-a-drop-down-list-with-the-select-element/
+https://www.freecodecamp.org/news/html-select-tag-how-to-make-a-dropdown-menu-or-combo-list/
