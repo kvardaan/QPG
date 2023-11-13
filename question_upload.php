@@ -12,6 +12,7 @@
                 <div>
                     <div class="form-group">
                         <label class="my-1 mr-2" for="colleges">Select College</label>
+                        <br>
                         <select class="custom-select my-1 mr-sm-2" id="colleges">
                             <option selected="" disabled="">Choose</option>
                             <option value="1">School of Technology</option>
@@ -29,6 +30,7 @@
                 <div id="program_select">
                     <div class="form-group">
                         <label class="my-1 mr-2" for="programs">Select Programs</label>
+                        <br>
                         <select class="custom-select my-1 mr-sm-2" id="programs">
                             <option selected="" disabled="">Choose...</option>
                             <option value="1" class="program_option">B.Tech</option>
@@ -43,6 +45,7 @@
                 <div id="branch_select">
                     <div class="form-group">
                         <label class="my-1 mr-2" for="branches">Select Branch</label>
+                        <br>
                         <select class="custom-select my-1 mr-sm-2" id="branches">
                             <option selected="" disabled="">Choose...</option>
                             <option value="12" class="program_option">CSE</option>
@@ -56,16 +59,31 @@
                 <div id="semester_select">
                     <div class="form-group">
                         <label class="my-1 mr-2" for="semester">Select Semester</label>
+                        <br>
                         <select class="custom-select my-1 mr-sm-2" id="semester">
                             <option selected="" disabled="">Choose...</option>
-                            <option value="1" class="program_option">1st</option>
-                            <option value="2" class="program_option">2nd</option>
-                            <option value="3" class="program_option">3rd</option>
-                            <option value="4" class="program_option">4th</option>
-                            <option value="5" class="program_option">5th</option>
-                            <option value="6" class="program_option">6th</option>
-                            <option value="7" class="program_option">7th</option>
-                            <option value="8" class="program_option">8th</option>
+                            <option value="1">1st</option>
+                            <option value="2">2nd</option>
+                            <option value="3">3rd</option>
+                            <option value="4">4th</option>
+                            <option value="5">5th</option>
+                            <option value="6">6th</option>
+                            <option value="7">7th</option>
+                            <option value="8">8th</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- subject select -->
+                <div id="subject_select">
+                    <div class="form-group">
+                        <label class="my-1 mr-2" for="subject">Select Subject</label>
+                        <br>
+                        <select class="custom-select my-1 mr-sm-2" id="subject">
+                            <option selected="" disabled="">Choose...</option>
+                            <option value="1">ABC</option>
+                            <option value="2">DEF</option>
+                            <option value="3">GHI</option>
+                            <option value="4">JKL</option>
                         </select>
                     </div>
                 </div>
