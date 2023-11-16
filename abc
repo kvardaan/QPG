@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Upload Your<br>
+                <span style="font-size: 25px; color: #ff8239; text-decoration: underline;">Questions</span>
+            </h3>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <div class="form-group">
+                    <label class="my-1 mr-2" for="colleges">Select College</label>
+                    <br>
+                    <select class="custom-select my-1 mr-sm-2" id="colleges" name="colleges">
+                        <option selected disabled>Choose</option>
+                        <?php
+                            while ($college = $collegesResult->fetch_assoc()) {
+                                echo "<option value='{$college['c_id']}'>{$college['c_name']}</option>";
+                            }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <!-- programs select -->
+            <div id="program_select">
+                <div class="form-group">
+                    <label class="my-1 mr-2" for="programs">Select Programs</label>
+                    <br>
+                    <select class="custom-select my-1 mr-sm-2" id="programs" name="programs">
+                        <option selected disabled>Choose</option>
+                        <?php
+                            while ($program = $programsResult->fetch_assoc()) {
+                                echo "<option value='{$program['p_id']}'>{$program['p_name']}</option>";
+                            }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <!-- branch select -->
+            <div id="branch_select">
+                <div class="form-group">
+                    <label class="my-1 mr-2" for="branches">Select Branch</label>
+                    <br>
+                    <select class="custom-select my-1 mr-sm-2" id="branches">
+                        <option selected disabled>Choose</option>
+                        <?php
+                            while ($branch = $branchesResult->fetch_assoc()) {
+                                echo "<option value='{$branch['b_id']}'>{$branch['b_name']}</option>";
+                            }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <!-- semester select -->
+            <div id="semester_select">
+                <div class="form-group">
+                    <label class="my-1 mr-2" for="semester">Select Semester</label>
+                    <br>
+                    <select class="custom-select my-1 mr-sm-2" id="semester">
+                        <option selected disabled>Choose</option>
+                        <?php
+                            while ($semester = $semesterResult->fetch_assoc()) {
+                                echo "<option value='{$semester['s_id']}'>{$semester['s_name']}</option>";
+                            }
+                        ?>
+                    </select>
+                </div>
+            </div>
+            <!-- subject select -->
+            <div id="subject_select">
+                <div class="form-group">
+                    <label class="my-1 mr-2" for="subject">Select Subject</label>
+                    <br>
+                    <select class="custom-select my-1 mr-sm-2" id="subject">
+                        <option selected disabled>Choose</option>
+                        <?php
+                            while ($subject = $subjectResult->fetch_assoc()) {
+                                echo "<option value='{$subject['sub_id']}'>{$subject['sub_name']}</option>";
+                            }
+                        ?>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
