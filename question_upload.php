@@ -26,23 +26,27 @@
 
                     <br><label class="my-1 mr-2" for="programs">Select Program</label>
                     <br><select class="custom-select my-1 mr-sm-2" id="programs">
-                        <option selected="" disabled="">Choose</option>
                     </select> 
 
                     <br><label class="my-1 mr-2" for="branches">Select Branch</label>
                     <br><select class="custom-select my-1 mr-sm-2" id="branches">
-                        <option selected="" disabled="">Choose</option>
                     </select>
 
                     <br><label class="my-1 mr-2" for="semester">Select Semester</label>
                     <br><select class="custom-select my-1 mr-sm-2" id="semester">
-                        <option selected="" disabled="">Choose</option>
                     </select>
 
                     <br><label class="my-1 mr-2" for="subject">Select Subject</label>
                     <br><select class="custom-select my-1 mr-sm-2" id="subject">
-                        <option selected="" disabled="">Choose</option>
                     </select>
+
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <label for="excel">Upload Questions</label>
+                        <input type="file" name="excel" id="excel" accept=".xls, .xlsx, .csv" required>
+                        <br>
+                        <button type="submit" name="submit">Upload</button>
+                    </form>
+
                 </div>
             </div>
         </div>
