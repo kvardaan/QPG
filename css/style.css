@@ -32,17 +32,17 @@ nav a:hover {
 }
 
 /* Logo */
-nav img {
+/* nav img {
     width: 5%;
     height: 5%;
     float: inline-start;
     margin-left: 10%;
-}
+} */
 
 /* Navigation menu */
 nav ul {
     list-style: none;
-    text-align: right; /* Align the content to the right */
+    text-align: right;
 }
 
 nav ul li {
@@ -166,11 +166,7 @@ select{
   /* height: 100vh; This ensures that the section takes up the full height of the viewport */
 }
 
-.dashboard ul {
-  list-style: none; /* Remove default list styles (bullet points) */
-  padding: 0; /* Remove any default padding */
-}
-
-.dashboard li {
-  margin-bottom: 5px; /* Optional: Add some spacing between list items */
+.vertical-line {
+    border-right: 1px solid #ccc; /* Adjust the color as needed */
+    height: 100%;
 }
