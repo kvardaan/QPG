@@ -18,7 +18,8 @@ body {
 
 /* Header and Navigation styles */
 nav {
-    background-color: #6a0dad;
+    background-color: #112D51; 
+    /* Earlier Blue - #1D4C87 */
     color: #fff;
 }
 
@@ -52,7 +53,7 @@ nav ul li {
 
 /* Button styles */
 button {
-    background-color: #6a0dad;
+    background-color: #112D51;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -70,7 +71,7 @@ button:hover {
 }
 
 .dashboard-button:hover {
-    background-color: #6a0dad;
+    background-color: #112D51;
     color: #fff;
 }
 
@@ -110,7 +111,7 @@ button:hover {
 
 /* Center-align the Sign Up and Log In buttons */
 .signup-form button {
-    background-color: #6a0dad;
+    background-color: #112D51;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -158,15 +159,25 @@ select{
   width: 280px;
 }
 
-.dashboard p{
+/* .p{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 100vh; This ensures that the section takes up the full height of the viewport */
-}
+} */
 
 .vertical-line {
-    border-right: 1px solid #ccc; /* Adjust the color as needed */
+    border-right-style: dotted;
+    border-right: thick rgb(0, 0, 0);
+    /* border-color: black; Adjust the color as needed */
     height: 100%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
