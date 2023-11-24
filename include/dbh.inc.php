@@ -3,7 +3,7 @@
     $servername = "127.0.0.1:3308";
     $username = "root";
     $password = "";
-    $dbname = "form_datadb";
+    $dbname = "qp_gen";
 
     //create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
