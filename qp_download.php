@@ -4,11 +4,12 @@
     $colleges = "SELECT * FROM colleges";
     $colleges_qry = mysqli_query($conn, $colleges);
 ?>
+    
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h3>Download<br>
-                    <span style="font-size: 25px; color: #ff8239; text-decoration: underline;;">Question Paper</span>
+                <h3><span style="font-size: 1.2em;">Download</span><br>
+                    <span style="font-size: 1.5em; color: #ff8239; text-decoration: underline;;">Question Paper</span>
                 </h3>
             </div>
             <div class="col-md-4">
@@ -38,6 +39,13 @@
 
                     <br><label class="my-1 mr-2" for="subject">Select Subject</label>
                     <select class="form-control" id="subject">
+                    </select>
+
+                    <br><label class="my-1 mr-2" for="filetype">Select File Type</label>
+                    <select class="form-control" id="filetype">
+                        <option selected disabled>Choose</option>
+                        <option value="1">.pdf</option>
+                        <option value="2">.doc</option>
                     </select>
                 
                     <br><div style="text-align: center;">

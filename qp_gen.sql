@@ -1,5 +1,6 @@
 -- Database: `qp_gen`
 
+DROP TABLE IF EXISTS `signup_form_entries`; 
 CREATE TABLE IF NOT EXISTS `signup_form_entries` (
   `userid` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255),
@@ -12,6 +13,7 @@ CREATE TABLE IF NOT EXISTS `signup_form_entries` (
 
 -- Table structure for table `colleges`
 
+DROP TABLE IF EXISTS `colleges`; 
 CREATE TABLE IF NOT EXISTS `colleges` (
   `c_id` int PRIMARY KEY AUTO_INCREMENT,
   `c_name` varchar(255) 
@@ -31,6 +33,7 @@ INSERT INTO `colleges` (`c_name`) VALUES
 
 -- Table structure for table `programs`
 
+DROP TABLE IF EXISTS `programs`; 
 CREATE TABLE IF NOT EXISTS `programs` (
   `p_id` int PRIMARY KEY AUTO_INCREMENT,
   `prog` varchar(255),
@@ -78,6 +81,7 @@ INSERT INTO `programs` (`prog`, `c_id`, `p_duration`) VALUES
 
 -- Table structure for table `branch`
 
+DROP TABLE IF EXISTS `branch`; 
 CREATE TABLE IF NOT EXISTS `branch` (
   `b_id` int PRIMARY KEY AUTO_INCREMENT,
   `branch` varchar(255),
@@ -146,11 +150,12 @@ INSERT INTO `branch` (`b_id`, `branch`, `p_id`) VALUES
 
 -- Table structure for table `semester`
 
+DROP TABLE IF EXISTS `semester`; 
 CREATE TABLE IF NOT EXISTS `semester` (
   `s_id` int PRIMARY KEY AUTO_INCREMENT,
-  `sem` int(11) ,
-  `p_duration` int(11) ,
-  FOREIGN KEY (`p_duration`) REFERENCES `programs` (`p_duration`)
+  `sem` int(11),
+  `p_duration` int(11),
+  FOREIGN KEY (`p_duration`) REFERENCES `programs` (`p_duration`) ON DELETE CASCADE
 );
 
 INSERT INTO `semester` (`sem`, `p_duration`) VALUES
@@ -189,6 +194,7 @@ INSERT INTO `semester` (`sem`, `p_duration`) VALUES
 
 -- Table structure for table `session`
 
+DROP TABLE IF EXISTS `session`; 
 CREATE TABLE IF NOT EXISTS `session` (
   `sess_id` int PRIMARY KEY AUTO_INCREMENT,
   `session` varchar(11)
@@ -202,6 +208,7 @@ INSERT INTO `session` (`sess_id`, `session`) VALUES
 
 -- Table structure for table `subject`
 
+DROP TABLE IF EXISTS `subject`; 
 CREATE TABLE IF NOT EXISTS `subject` (
   `sub_id` varchar PRIMARY KEY,
   `sub` varchar(255),
@@ -238,6 +245,7 @@ INSERT INTO `subject` (`sub_id`, `sub`, `p_id`, `s_id`) VALUES
 
 -- Table structure for table `question`
 
+DROP TABLE IF EXISTS `question`; 
 CREATE TABLE IF NOT EXISTS `question` (
   `ques_id` int PRIMARY KEY AUTO_INCREMENT,
   `question` varchar(2500),

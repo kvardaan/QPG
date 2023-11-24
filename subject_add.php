@@ -10,10 +10,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h3>Add<br>
-                    <span style="font-size: 25px; color: #ff8239; text-decoration: underline;;">Subject</span>
+                <h3><span style="font-size: 1.2em;">Add</span><br>
+                    <span style="font-size: 1.5em; color: #ff8239; text-decoration: underline;;">Subject</span>
                 </h3>
             </div>
+
             <div class="col-md-4">
             <div class="form-group">
                     <form action="include/subject_add.inc.php" method="post" class="my-1 mr-2">
@@ -40,7 +41,7 @@
                         </select>
 
                         <br><label for="floatingInput">Add Subject</label>
-                        <input type="text" name="subjectid" class="form-control" id="floatingInput" placeholder="Enter Subject ID"  required/>
+                        <input type="text" name="subjectid" class="form-control" id="floatingInput" placeholder="Enter Subject ID" required/>
                         <br><input type="text" name="subject" class="form-control" id="floatingInput" placeholder="Enter Subject Name"  required/>
 
                         <br>

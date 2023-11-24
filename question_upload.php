@@ -8,8 +8,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h3>Upload Your<br>
-                    <span style="font-size: 25px; color: #ff8239; text-decoration: underline;;">Questions</span>
+                <h3><span style="font-size: 1.2em;">Upload</span><br>
+                    <span style="font-size: 1.5em; color: #ff8239; text-decoration: underline;;">Questions</span>
                 </h3>
             </div>
             <div class="col-md-4">
@@ -41,7 +41,7 @@
                     </select>
 
                     <br><form action="include\upload.inc.php" method="post" enctype="multipart/form-data">
-                        <label for="excel">Upload Questions</label>
+                        <label for="excel">Upload Questions(*excel files only)</label>
                         <input type="file" name="excel" id="excel" accept=".xls, .xlsx, .csv" required>
                         <div style="text-align: center;">
                             <button type="submit" name="submit">Upload</button>
