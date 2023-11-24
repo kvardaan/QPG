@@ -40,8 +40,8 @@
                         </select>
 
                         <br><label for="floatingInput">Add Subject</label>
-                        <input type="text" name="subjectid" class="form-control" id="floatingInput" placeholder="Enter Subject ID" />
-                        <br><input type="text" name="subject" class="form-control" id="floatingInput" placeholder="Enter Subject Name" />
+                        <input type="text" name="subjectid" class="form-control" id="floatingInput" placeholder="Enter Subject ID"  required/>
+                        <br><input type="text" name="subject" class="form-control" id="floatingInput" placeholder="Enter Subject Name"  required/>
 
                         <br>
                         <div style="text-align: center;">
