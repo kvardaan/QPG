@@ -7,6 +7,7 @@
 
     $output = '<option selected="" disabled="">Choose</option>';
     while ($program_row = mysqli_fetch_assoc($program_qry)) {
-        $output .= '<option value="' . $program_row['p_id'] . '">' . $program_row['p_name'] . '</option>';
+        $output .= '<option value="' . $program_row['p_id'] . '">' . $program_row['prog'] . '</option>';
     }
     echo $output;
+?>

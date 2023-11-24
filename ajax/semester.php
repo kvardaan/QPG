@@ -1,12 +1,20 @@
 <?php
-    include '../include/dbh.inc.php';
-    $b_id = $_POST['branch_data'];
+    include '../include/dbh.inc.php'; // Adjust the path as needed
+    $p_id = $_POST['program_data'];
 
-    $semester = "SELECT * FROM semester WHERE b_id = $b_id";
-    $semester_qry = mysqli_query($conn, $semester);
+    // Fetch program duration from the database
+    $program_duration_query = "SELECT p_duration FROM programs WHERE p_id = $p_id";
+    $program_duration_result = mysqli_query($conn, $program_duration_query);
+    $program_duration_row = mysqli_fetch_assoc($program_duration_result);
+    $program_duration = $program_duration_row["p_duration"];
 
-    $output = '<option selected="" disabled="">Choose</option>';
-    while ($semester_row = mysqli_fetch_assoc($semester_qry)) {
-        $output .= '<option value="' . $semester_row['s_id'] . '">' . $semester_row['s_name'] . '</option>';
+    // Fetch semesters based on session and program duration
+    $semester_query = "SELECT * FROM semester WHERE p_duration = $program_duration";
+    $semester_result = mysqli_query($conn, $semester_query);
+
+    echo '<option selected="" disabled="">Choose</option>';
+
+    while ($row = mysqli_fetch_assoc($semester_result)) {
+        echo "<option value='" . $row["s_id"] . "'>" . $row["sem"] . "</option>";
     }
-    echo $output;
+?>

@@ -7,6 +7,8 @@
 
     $output = '<option selected="" disabled="">Choose</option>';
     while ($branch_row = mysqli_fetch_assoc($branch_qry)) {
-        $output .= '<option value="' . $branch_row['b_id'] . '">' . $branch_row['b_name'] . '</option>';
+        $output .= '<option value="' . $branch_row['b_id'] . '">' . $branch_row['branch'] . '</option>';
     }
     echo $output;
+
+?>
