@@ -1,5 +1,5 @@
 <?php
-    include_once 'include\header.php';
+    include_once 'header.php';
     require_once 'include\dbh.inc.php';
     $colleges = "SELECT * FROM colleges";
     $colleges_qry = mysqli_query($conn, $colleges);
@@ -15,7 +15,7 @@
                 
                 <div class="form-group">
                     <label class="my-1 mr-2" for="colleges">Select College</label>
-                    <br><select class="custom-select my-1 mr-sm-2" id="colleges">
+                    <select class="form-control" id="colleges">
                         <option selected="" disabled="">Choose</option>
                         <?php 
                             while ($row = mysqli_fetch_assoc($colleges_qry)) {
@@ -25,74 +25,31 @@
                     </select>
 
                     <br><label class="my-1 mr-2" for="programs">Select Program</label>
-                    <br><select class="custom-select my-1 mr-sm-2" id="programs">
+                    <select class="form-control" id="programs">
                     </select> 
 
                     <br><label class="my-1 mr-2" for="branches">Select Branch</label>
-                    <br><select class="custom-select my-1 mr-sm-2" id="branches">
+                    <select class="form-control" id="branches">
                     </select>
 
                     <br><label class="my-1 mr-2" for="semester">Select Semester</label>
-                    <br><select class="custom-select my-1 mr-sm-2" id="semester">
+                    <select class="form-control" id="semester">
                     </select>
 
                     <br><label class="my-1 mr-2" for="subject">Select Subject</label>
-                    <br><select class="custom-select my-1 mr-sm-2" id="subject">
+                    <select class="form-control" id="subject">
                     </select>
+                
+                    <br><div style="text-align: center;">
+                        <button type="submit" name="submit">Download</button>
+                    </div>
+                
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-    //Program fetch using College
-    $('#colleges').on('change', function() {    // with # insert the name of the field with which the next field has to be linked
-        var c_id = this.value;
-        $.ajax({
-            url: 'ajax/program.php',
-            type: "POST",
-            data: {
-                college_data: c_id
-            },
-            success: function(result) {
-                $('#programs').html(result);    //change the name to the specific id for which the task is being performed
-            }
-        })
-    });
-
-    //Branch fetch using Program
-    $('#programs').on('change', function() {    
-        var p_id = this.value;
-        $.ajax({
-            url: 'ajax/branch.php',
-            type: "POST",
-            data: {
-                program_data: p_id
-            },
-            success: function(result) {
-                $('#branches').html(result); 
-            }
-        })
-    });
-
-    //Semester fetch using Branch
-    $('#branches').on('change', function() {
-        var b_id = this.value;
-        $.ajax({
-            url: 'ajax/semester.php',
-            type: "POST",
-            data: {
-                branch_data: b_id
-            },
-            success: function(result) {
-                $('#semester').html(result);
-            }
-        })
-    });
-
-
-</script>
 <?php
-    include_once 'include/footer.php';
-    $conn->close();  // Close the database connection when done
+    include_once 'footer.php';
+    $conn->close();
 ?>
