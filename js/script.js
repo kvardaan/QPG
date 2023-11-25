@@ -9,3 +9,10 @@ buttons.forEach(button => {
         }, 300);
     });
 });
+
+// JavaScript function to update the hidden input field
+function updateSelectedSubject() {
+    var selectedSubject = document.getElementById("subject").value;
+    document.getElementById("selectedSubject").value = selectedSubject;
+    console.log("Selected Subject: " + selectedSubject);  // Add this line for debugging
+}
