@@ -181,3 +181,14 @@ select{
     color: white;
     text-align: center;
 }
+
+
+.success-blink {
+    animation: blinker 2s linear infinite;
+    color: green;
+  }
+  @keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+  }
